@@ -45,8 +45,9 @@ board.addEventListener('click', event => {
 
 document.addEventListener('keydown', function(event){
   if(event.key === 'Escape'){
-  time = selectedTime;
-  setTime(time);
+   timeEl.classList.remove('lastSeconds', 'blink');
+   clearInterval(window.timer);
+   backToMainMenu();
   }
 })
 
